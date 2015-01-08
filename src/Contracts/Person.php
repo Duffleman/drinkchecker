@@ -109,7 +109,7 @@ abstract class Person implements PersonInterface {
     }
 
     /**
-     * Getters for all objects since nothing here is really private.
+     * Getters for all objects since nothing here is really private apart from their home.
      * Other than their home.
      * @param $name
      * @return mixed

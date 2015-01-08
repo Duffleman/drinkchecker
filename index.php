@@ -6,7 +6,7 @@ use Duffleman\Contracts\FoodItem as FoodContract;
 use Duffleman\Contracts\Home as HomeContract;
 use Duffleman\Contracts\Person as PersonContract;
 
-class JDAndCoke extends FoodContract {}
+class Drink extends FoodContract {}
 class Human extends PersonContract {}
 class Home extends HomeContract {}
 
@@ -17,7 +17,7 @@ $person = new Human('Jake', 18, new Home('Chalk Farm Residence'));
 while (!$person->isDrunk() AND $person->drinksConsumed <= 15)
 {
 	// Drink another!
-    $person->consume(new JDAndCoke('JD & Coke', 1));
+    $person->consume(new Drink('JD & Coke', 1));
     echo('<br>');
 }
 

@@ -19,5 +19,5 @@ You can also build new people with their units allowed like this:
 
 ```php
 $person = new Human('My Name', 20, new Home('My Home'));
-$person->consume(new FoodContract('Vodka and Lemonade', 2));
+$person->consume(new Drink('Vodka and Lemonade', 2));
 ```
