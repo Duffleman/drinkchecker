@@ -1,0 +1,11 @@
+{
+    "require-dev": {
+        "symfony/var-dumper": "*",
+        "illuminate/support": "*"
+    },
+    "autoload": {
+		"psr-4": {
+			"Duffleman\\": "src/"
+		}
+	}
+}
