@@ -22,7 +22,6 @@ abstract class Person implements PersonInterface {
 
     /**
      * Where do they live?
-     * @var \Duffleman\Classes\Home\HomeInterface
      */
     protected $home;
 
@@ -31,12 +30,18 @@ abstract class Person implements PersonInterface {
      * @var
      */
     protected $unitsConsumed;
-    
+
     /**
      * How many units of alcohol can they handle?
      * @var
      */
     protected $unitsAllowed;
+
+    /**
+     * Sets the override drink
+     * @var \Duffleman\Contracts\FoodItemInterface
+     */
+    protected $override;
 
     /**
      * @param                                       $name
@@ -45,13 +50,14 @@ abstract class Person implements PersonInterface {
      * @param \Duffleman\Classes\Home\HomeInterface $home
      * @param bool                                  $isDrunk
      */
-    function __construct($name, $unitsAllowed, HomeInterface $home = null, $drinksConsumed = 0, $isDrunk = false)
+    function __construct($name, $unitsAllowed, HomeInterface $home = null, FoodItemInterface $overrideDrink = null, $drinksConsumed = 0, $isDrunk = false)
     {
         $this->drinksConsumed = $drinksConsumed;
         $this->unitsAllowed = $unitsAllowed;
         $this->home = $home;
         $this->isDrunk = $isDrunk;
         $this->name = $name;
+        $this->override = $overrideDrink;
     }
 
     /**
@@ -61,6 +67,7 @@ abstract class Person implements PersonInterface {
      */
     public function consume(FoodItemInterface $item, $quantity = 1)
     {
+        $item = $this->override ?: $item;
         $item->consume($this, $quantity);
         $this->unitsConsumed += $item->units();
         $this->drinksConsumed += $quantity;
@@ -116,9 +123,11 @@ abstract class Person implements PersonInterface {
      */
     function __get($name)
     {
-        if($name == 'home') {
+        if ($name == 'home')
+        {
             throw new Exception('The `home` variable is protected');
         }
+
         return $this->$name;
     }
 
