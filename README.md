@@ -15,9 +15,17 @@ composer install --no-dev
 
 Then you can use a server of your choice, to host the files. Run `index.php` and you'll see how it works.
 
-You can also build new people with their units allowed like this:
+You can build your own manager:
+
 
 ```php
-$person = new Human('My Name', 20, new Home('My Home'));
-$person->consume(new Drink('Vodka and Lemonade', 2));
+$manager = new AlcoholManager;
+$manager->push($person);
+
+// Declare a round of JD & Cokes, 1 unit of alcohol per drink
+$round = new DrinkingRound(new Drink('JD & Coke', 1));
+
+$manager->startRound($round);
 ```
+
+Will give each person a drink in that round, unless they have an override drink set. (See index.php for the example)

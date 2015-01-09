@@ -39,6 +39,7 @@ $manager->startRound($round);
 
 while ($manager->drunkPeople->count() == 0 AND $manager->totalDrinksConsumed <= 50)
 {
+	// Repeat the previously used round
     $manager->repeat();
 }
 
