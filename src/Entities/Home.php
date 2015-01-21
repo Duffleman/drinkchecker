@@ -1,6 +1,8 @@
-<?php namespace Duffleman\Contracts;
+<?php namespace Duffleman\Entities;
 
-abstract class Home implements HomeInterface {
+use Duffleman\Contracts\HomeInterface;
+
+class Home implements HomeInterface {
 
     /**
      * Name of the home

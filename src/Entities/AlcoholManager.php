@@ -5,23 +5,52 @@ use Illuminate\Support\Collection;
 
 class AlcoholManager {
 
+    /**
+     * Collection of people this Manager handles.
+     * @var \Illuminate\Support\Collection
+     */
     protected $people;
+    /**
+     * Stores the last round that cycled.
+     * @var
+     */
     private $lastRound;
+    /**
+     * Stores the total amount of drinks consumed while this manager has been active.
+     * @var
+     */
     protected $totalDrinksConsumed;
+    /**
+     * Number of total rounds this manager has handled.
+     * @var
+     */
     protected $totalRounds;
+    /**
+     * A collection of people who are drunk.
+     * @var \Illuminate\Support\Collection
+     */
     protected $drunkPeople;
 
+    /**
+     * Initiators
+     */
     public function __construct()
     {
         $this->people = new Collection;
         $this->drunkPeople = new Collection;
     }
 
+    /**
+     * @param \Duffleman\Contracts\PersonInterface $person
+     */
     public function push(PersonInterface $person)
     {
         $this->people->push($person);
     }
 
+    /**
+     * @param \Duffleman\Entities\DrinkingRound $round
+     */
     public function startRound(DrinkingRound $round)
     {
         $this->lastRound = $round;
@@ -38,6 +67,9 @@ class AlcoholManager {
         }
     }
 
+    /**
+     * @throws \Duffleman\Entities\Exception
+     */
     public function repeat()
     {
         if (!$this->lastRound)
@@ -47,6 +79,18 @@ class AlcoholManager {
         $this->startRound($this->lastRound);
     }
 
+    /**
+     * @return int
+     */
+    public function drunkPeopleCount()
+    {
+        return count($this->drunkPeople);
+    }
+
+    /**
+     * @param $name
+     * @return mixed
+     */
     function __get($name)
     {
         return $this->$name;

@@ -1,7 +1,9 @@
 {
+	"require": {
+		"illuminate/support": "*"
+	},
     "require-dev": {
-        "symfony/var-dumper": "*",
-        "illuminate/support": "*"
+        "symfony/var-dumper": "*"
     },
     "autoload": {
 		"psr-4": {

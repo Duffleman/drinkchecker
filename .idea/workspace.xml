@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59281e0c-3dc0-4edb-8e75-2513fef14bb7" name="Default" comment="Better way of handling it">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Entities/AlcoholManager.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Entities/DrinkingRound.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Contracts/Person.php" afterPath="$PROJECT_DIR$/src/Contracts/Person.php" />
+      <change type="DELETED" beforePath="E:\Git\drinks\src\Contracts\FoodItem.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Git\drinks\src\Contracts\Home.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\Git\drinks\src\Contracts\Person.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/AlcoholManager.php" afterPath="$PROJECT_DIR$/src/Entities/AlcoholManager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Entities/DrinkingRound.php" afterPath="$PROJECT_DIR$/src/Entities/DrinkingRound.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="drinks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,10 +36,10 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4340836" vertical-offset="459" max-vertical-offset="1392">
-              <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.63987136" vertical-offset="195" max-vertical-offset="1128">
+              <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
               <folding>
-                <element signature="e#39#88#0#PHP" expanded="true" />
+                <element signature="e#39#77#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -58,8 +61,11 @@
         <option value="$PROJECT_DIR$/src/Contracts/DrinkingRound.php" />
         <option value="$PROJECT_DIR$/src/Contracts/AlcoholManager.php" />
         <option value="$PROJECT_DIR$/src/Contracts/PersonInterface.php" />
-        <option value="$PROJECT_DIR$/src/Entities/DrinkingRound.php" />
         <option value="$PROJECT_DIR$/src/Contracts/Person.php" />
+        <option value="$PROJECT_DIR$/src/Entities/Home.php" />
+        <option value="$PROJECT_DIR$/src/Entities/Person.php" />
+        <option value="$PROJECT_DIR$/src/Entities/FoodItem.php" />
+        <option value="$PROJECT_DIR$/src/Entities/DrinkingRound.php" />
         <option value="$PROJECT_DIR$/src/Entities/AlcoholManager.php" />
         <option value="$PROJECT_DIR$/index.php" />
       </list>
@@ -98,6 +104,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -154,7 +161,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -165,6 +171,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="FullScreen" value="false" />
     <property name="LayoutCode.rearrangeEntriesPHP" value="false" />
+    <property name="SearchEverywhereHistoryKey" value="plugins&#9;ACTION&#9;WelcomeScreen.Plugins" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -190,6 +197,11 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <pass-parent-env-vars>false</pass-parent-env-vars>
+      <envs />
       <method />
     </configuration>
     <list size="0" />
@@ -255,29 +267,54 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Contracts/HomeInterface.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="946">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="1416">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+          <folding>
+            <element signature="e#39#77#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3000">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Contracts/Person.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5835095" vertical-offset="1176" max-vertical-offset="3360">
-          <caret line="72" column="43" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3000">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/Home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27906978" vertical-offset="0" max-vertical-offset="984">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/Person.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32980973" vertical-offset="48" max-vertical-offset="3456">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/FoodItem.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32980973" vertical-offset="24" max-vertical-offset="1392">
+          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/DrinkingRound.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30443975" vertical-offset="0" max-vertical-offset="946">
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -290,28 +327,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/DrinkingRound.php">
+    <entry file="file://$PROJECT_DIR$/src/Contracts/HomeInterface.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30443975" vertical-offset="0" max-vertical-offset="946">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="946">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Contracts/FoodItemInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3551797" vertical-offset="0" max-vertical-offset="946">
+          <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entities/AlcoholManager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44186047" vertical-offset="470" max-vertical-offset="1416">
-          <caret line="38" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.33298096" vertical-offset="165" max-vertical-offset="2472">
+          <caret line="21" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4340836" vertical-offset="459" max-vertical-offset="1392">
-          <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.63987136" vertical-offset="195" max-vertical-offset="1128">
+          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
           <folding>
-            <element signature="e#39#88#0#PHP" expanded="true" />
+            <element signature="e#39#77#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

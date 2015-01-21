@@ -2,23 +2,11 @@
 
 require 'vendor/autoload.php';
 
-use Duffleman\Contracts\FoodItem as FoodContract;
-use Duffleman\Contracts\Home as HomeContract;
-use Duffleman\Contracts\Person as PersonContract;
 use Duffleman\Entities\AlcoholManager;
 use Duffleman\Entities\DrinkingRound;
-
-class Drink extends FoodContract {
-
-}
-
-class Human extends PersonContract {
-
-}
-
-class Home extends HomeContract {
-
-}
+use Duffleman\Entities\FoodItem as Drink;
+use Duffleman\Entities\Home;
+use Duffleman\Entities\Person as Human;
 
 // Build our Manager
 $manager = new AlcoholManager;
@@ -37,9 +25,9 @@ $round = new DrinkingRound(new Drink('JD & Coke', 1));
 // Run it!
 $manager->startRound($round);
 
-while ($manager->drunkPeople->count() == 0 AND $manager->totalDrinksConsumed <= 50)
+while ($manager->drunkPeopleCount() == 0 AND $manager->totalDrinksConsumed <= 50)
 {
-	// Repeat the previously used round
+    // Repeat the previously used round
     $manager->repeat();
 }
 

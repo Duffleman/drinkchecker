@@ -1,6 +1,10 @@
-<?php namespace Duffleman\Contracts;
+<?php namespace Duffleman\Entities;
 
-abstract class Person implements PersonInterface {
+use Duffleman\Contracts\FoodItemInterface;
+use Duffleman\Contracts\HomeInterface;
+use Duffleman\Contracts\PersonInterface;
+
+class Person implements PersonInterface {
 
     /**
      * Name of the person

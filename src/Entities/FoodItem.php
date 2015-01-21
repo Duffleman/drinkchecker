@@ -1,6 +1,9 @@
-<?php namespace Duffleman\Contracts;
+<?php namespace Duffleman\Entities;
 
-abstract class FoodItem implements FoodItemInterface {
+use Duffleman\Contracts\FoodItemInterface;
+use Duffleman\Contracts\PersonInterface;
+
+class FoodItem implements FoodItemInterface {
 
     /**
      * Name of the consumable item
@@ -13,7 +16,7 @@ abstract class FoodItem implements FoodItemInterface {
      * @var
      */
     protected $units;
-    
+
     /**
      * Setters for the above variables.
      * @param $name
