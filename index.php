@@ -9,7 +9,7 @@ use Duffleman\Entities\Home;
 use Duffleman\Entities\Person as Human;
 
 // Build our Manager
-$manager = new AlcoholManager;
+$manager = new AlcoholManager();
 
 // Create our people
 $personOne = new Human('Jake', 18, new Home('Chalk Farm Residence'));
@@ -25,18 +25,16 @@ $round = new DrinkingRound(new Drink('JD & Coke', 1));
 // Run it!
 $manager->startRound($round);
 
-while ($manager->drunkPeopleCount() == 0 AND $manager->totalDrinksConsumed <= 50)
-{
+while ($manager->drunkPeopleCount() == 0 and $manager->totalDrinksConsumed <= 50) {
     // Repeat the previously used round
     $manager->repeat();
 }
 
 // Stats
-foreach ($manager->people as $person)
-{
+foreach ($manager->people as $person) {
     echo '<br><br>';
     $status = ($person->isDrunk() ? 'drunk' : 'sober');
-    echo $person->name . ' is currently ' . $status . ', and has consumed a total of ' . $person->drinksConsumed . ' drinks, which is ' . $person->unitsConsumed . ' units of alcohol.';
+    echo $person->name.' is currently '.$status.', and has consumed a total of '.$person->drinksConsumed.' drinks, which is '.$person->unitsConsumed.' units of alcohol.';
     echo '<br>';
-    echo 'That is ' . $person->over() . ' over his set limit.';
+    echo 'That is '.$person->over().' over his set limit.';
 }

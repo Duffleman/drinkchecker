@@ -1,6 +1,7 @@
 <?php namespace Duffleman\Contracts;
 
-interface FoodItemInterface {
+interface FoodItemInterface
+{
 
     /**
      * Setters for the class
@@ -11,8 +12,8 @@ interface FoodItemInterface {
 
     /**
      * Allows the food to be consumed
-     * @param \Duffleman\Contracts\PersonInterface $person
-     * @param int                                  $quantity
+     * @param  \Duffleman\Contracts\PersonInterface $person
+     * @param  int                                  $quantity
      * @return mixed
      */
     public function consume(PersonInterface $person, $quantity = 1);

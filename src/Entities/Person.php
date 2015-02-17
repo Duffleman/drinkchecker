@@ -4,7 +4,8 @@ use Duffleman\Contracts\FoodItemInterface;
 use Duffleman\Contracts\HomeInterface;
 use Duffleman\Contracts\PersonInterface;
 
-class Person implements PersonInterface {
+class Person implements PersonInterface
+{
 
     /**
      * Name of the person
@@ -54,7 +55,7 @@ class Person implements PersonInterface {
      * @param \Duffleman\Classes\Home\HomeInterface $home
      * @param bool                                  $isDrunk
      */
-    function __construct($name, $unitsAllowed, HomeInterface $home = null, FoodItemInterface $overrideDrink = null, $drinksConsumed = 0, $isDrunk = false)
+    public function __construct($name, $unitsAllowed, HomeInterface $home = null, FoodItemInterface $overrideDrink = null, $drinksConsumed = 0, $isDrunk = false)
     {
         $this->drinksConsumed = $drinksConsumed;
         $this->unitsAllowed = $unitsAllowed;
@@ -83,8 +84,7 @@ class Person implements PersonInterface {
      */
     public function isDrunk()
     {
-        if ($this->unitsConsumed >= $this->unitsAllowed)
-        {
+        if ($this->unitsConsumed >= $this->unitsAllowed) {
             $this->isDrunk = true;
         }
 
@@ -96,12 +96,10 @@ class Person implements PersonInterface {
      */
     public function goHome()
     {
-        if (!$this->home)
-        {
+        if (!$this->home) {
             echo('No home on record, trying to go to previously used home');
-        } else
-        {
-            echo('Returning home to ' . $this->home->name);
+        } else {
+            echo('Returning home to '.$this->home->name);
         }
     }
 
@@ -111,8 +109,7 @@ class Person implements PersonInterface {
      */
     public function over()
     {
-        if ($this->unitsAllowed >= $this->unitsConsumed)
-        {
+        if ($this->unitsAllowed >= $this->unitsConsumed) {
             return 0;
         }
 
@@ -125,15 +122,12 @@ class Person implements PersonInterface {
      * @param $name
      * @return mixed
      */
-    function __get($name)
+    public function __get($name)
     {
-        if ($name == 'home')
-        {
+        if ($name == 'home') {
             throw new Exception('The `home` variable is protected');
         }
 
         return $this->$name;
     }
-
-
 }

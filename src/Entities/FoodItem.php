@@ -3,7 +3,8 @@
 use Duffleman\Contracts\FoodItemInterface;
 use Duffleman\Contracts\PersonInterface;
 
-class FoodItem implements FoodItemInterface {
+class FoodItem implements FoodItemInterface
+{
 
     /**
      * Name of the consumable item
@@ -22,7 +23,7 @@ class FoodItem implements FoodItemInterface {
      * @param $name
      * @param $units
      */
-    function __construct($name, $units)
+    public function __construct($name, $units)
     {
         $this->name = $name;
         $this->units = $units;
@@ -30,13 +31,13 @@ class FoodItem implements FoodItemInterface {
 
     /**
      * Allows the food to be consumed
-     * @param \Duffleman\Contracts\PersonInterface $person
-     * @param int                                  $quantity
+     * @param  \Duffleman\Contracts\PersonInterface $person
+     * @param  int                                  $quantity
      * @return mixed
      */
     public function consume(PersonInterface $person, $quantity = 1)
     {
-        echo($person->name . ' consumes ' . $quantity . ' ' . $this->name . '.');
+        echo($person->name.' consumes '.$quantity.' '.$this->name.'.');
 
         return true;
     }
@@ -49,5 +50,4 @@ class FoodItem implements FoodItemInterface {
     {
         return $this->units;
     }
-
 }

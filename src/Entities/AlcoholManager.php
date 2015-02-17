@@ -3,7 +3,8 @@
 use Duffleman\Contracts\PersonInterface;
 use Illuminate\Support\Collection;
 
-class AlcoholManager {
+class AlcoholManager
+{
 
     /**
      * Collection of people this Manager handles.
@@ -36,8 +37,8 @@ class AlcoholManager {
      */
     public function __construct()
     {
-        $this->people = new Collection;
-        $this->drunkPeople = new Collection;
+        $this->people = new Collection();
+        $this->drunkPeople = new Collection();
     }
 
     /**
@@ -55,12 +56,10 @@ class AlcoholManager {
     {
         $this->lastRound = $round;
         $this->totalRounds += 1;
-        foreach ($this->people as $person)
-        {
+        foreach ($this->people as $person) {
             $person->consume($round->drink);
             $this->totalDrinksConsumed += 1;
-            if ($person->isDrunk())
-            {
+            if ($person->isDrunk()) {
                 $this->drunkPeople->push($person);
             }
             echo("<br>"); // just for page formatting
@@ -72,8 +71,7 @@ class AlcoholManager {
      */
     public function repeat()
     {
-        if (!$this->lastRound)
-        {
+        if (!$this->lastRound) {
             throw new Exception('Cannot repeat a round, you never declared a first round!');
         }
         $this->startRound($this->lastRound);
@@ -91,9 +89,8 @@ class AlcoholManager {
      * @param $name
      * @return mixed
      */
-    function __get($name)
+    public function __get($name)
     {
         return $this->$name;
     }
-
 }

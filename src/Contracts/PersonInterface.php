@@ -1,6 +1,7 @@
 <?php namespace Duffleman\Contracts;
 
-interface PersonInterface {
+interface PersonInterface
+{
 
     /**
      * Sets the name for the person
@@ -10,7 +11,7 @@ interface PersonInterface {
 
     /**
      * Has the given person consume a food item.
-     * @param \Duffleman\Contracts\FoodItem $item
+     * @param  \Duffleman\Contracts\FoodItem $item
      * @return mixed
      */
     public function consume(FoodItemInterface $item);
@@ -32,6 +33,4 @@ interface PersonInterface {
      * @return mixed
      */
     public function over();
-
-
-} 
+}

@@ -1,6 +1,7 @@
 <?php namespace Duffleman\Contracts;
 
-interface HomeInterface {
+interface HomeInterface
+{
 
     /**
      * Setter for the name

@@ -2,7 +2,8 @@
 
 use Duffleman\Contracts\HomeInterface;
 
-class Home implements HomeInterface {
+class Home implements HomeInterface
+{
 
     /**
      * Name of the home
@@ -14,7 +15,7 @@ class Home implements HomeInterface {
      * Sets the name
      * @param $name
      */
-    function __construct($name)
+    public function __construct($name)
     {
         $this->name = $name;
     }
@@ -31,6 +32,4 @@ class Home implements HomeInterface {
     {
         return $this->$var;
     }
-
-
 }

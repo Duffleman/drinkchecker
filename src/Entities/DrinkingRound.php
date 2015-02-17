@@ -2,7 +2,8 @@
 
 use Duffleman\Contracts\FoodItemInterface;
 
-class DrinkingRound {
+class DrinkingRound
+{
 
     /**
      * Stores the specific drink for this round.
@@ -17,5 +18,4 @@ class DrinkingRound {
     {
         $this->drink = $item;
     }
-
 }
