@@ -5,21 +5,23 @@ use Duffleman\Contracts\PersonInterface;
 
 class FoodItem implements FoodItemInterface
 {
-
     /**
-     * Name of the consumable item
+     * Name of the consumable item.
+     *
      * @var
      */
     protected $name;
 
     /**
-     * How much alcohol in units the food contains
+     * How much alcohol in units the food contains.
+     *
      * @var
      */
     protected $units;
 
     /**
      * Setters for the above variables.
+     *
      * @param $name
      * @param $units
      */
@@ -30,9 +32,11 @@ class FoodItem implements FoodItemInterface
     }
 
     /**
-     * Allows the food to be consumed
-     * @param  \Duffleman\Contracts\PersonInterface $person
-     * @param  int                                  $quantity
+     * Allows the food to be consumed.
+     *
+     * @param \Duffleman\Contracts\PersonInterface $person
+     * @param int                                  $quantity
+     *
      * @return mixed
      */
     public function consume(PersonInterface $person, $quantity = 1)
@@ -43,7 +47,8 @@ class FoodItem implements FoodItemInterface
     }
 
     /**
-     * Getter for Units
+     * Getter for Units.
+     *
      * @return mixed
      */
     public function units()

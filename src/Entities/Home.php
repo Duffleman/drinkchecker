@@ -4,15 +4,16 @@ use Duffleman\Contracts\HomeInterface;
 
 class Home implements HomeInterface
 {
-
     /**
-     * Name of the home
+     * Name of the home.
+     *
      * @var
      */
     protected $name;
 
     /**
-     * Sets the name
+     * Sets the name.
+     *
      * @param $name
      */
     public function __construct($name)
@@ -26,6 +27,7 @@ class Home implements HomeInterface
      * But for the purpose of this, and in the context this app will be run, it'll be fine.
      *
      * @param $var
+     *
      * @return mixed
      */
     public function __get($var)

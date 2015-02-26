@@ -6,21 +6,23 @@ use Duffleman\Contracts\PersonInterface;
 
 class Person implements PersonInterface
 {
-
     /**
-     * Name of the person
+     * Name of the person.
+     *
      * @var
      */
     protected $name;
 
     /**
      * Are they drunk?
+     *
      * @var bool
      */
     protected $isDrunk;
 
     /**
      * How many have they consumed?
+     *
      * @var int
      */
     protected $drinksConsumed;
@@ -32,18 +34,21 @@ class Person implements PersonInterface
 
     /**
      * How many units have they consumed?
+     *
      * @var
      */
     protected $unitsConsumed;
 
     /**
      * How many units of alcohol can they handle?
+     *
      * @var
      */
     protected $unitsAllowed;
 
     /**
-     * Sets the override drink
+     * Sets the override drink.
+     *
      * @var \Duffleman\Contracts\FoodItemInterface
      */
     protected $override;
@@ -66,7 +71,8 @@ class Person implements PersonInterface
     }
 
     /**
-     * Allows for consuming a drink
+     * Allows for consuming a drink.
+     *
      * @param \Duffleman\Contracts\FoodItemInterface $item
      * @param int                                    $quantity
      */
@@ -79,7 +85,8 @@ class Person implements PersonInterface
     }
 
     /**
-     * Figure out if they are drunk
+     * Figure out if they are drunk.
+     *
      * @return bool
      */
     public function isDrunk()
@@ -92,7 +99,7 @@ class Person implements PersonInterface
     }
 
     /**
-     * Send them home
+     * Send them home.
      */
     public function goHome()
     {
@@ -105,6 +112,7 @@ class Person implements PersonInterface
 
     /**
      * Determine how far above their limit they are.
+     *
      * @return int
      */
     public function over()
@@ -119,7 +127,9 @@ class Person implements PersonInterface
     /**
      * Getters for all objects since nothing here is really private apart from their home.
      * Other than their home.
+     *
      * @param $name
+     *
      * @return mixed
      */
     public function __get($name)

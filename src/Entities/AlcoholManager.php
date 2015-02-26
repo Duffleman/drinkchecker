@@ -5,35 +5,39 @@ use Illuminate\Support\Collection;
 
 class AlcoholManager
 {
-
     /**
      * Collection of people this Manager handles.
+     *
      * @var \Illuminate\Support\Collection
      */
     protected $people;
     /**
      * Stores the last round that cycled.
+     *
      * @var
      */
     private $lastRound;
     /**
      * Stores the total amount of drinks consumed while this manager has been active.
+     *
      * @var
      */
     protected $totalDrinksConsumed;
     /**
      * Number of total rounds this manager has handled.
+     *
      * @var
      */
     protected $totalRounds;
     /**
      * A collection of people who are drunk.
+     *
      * @var \Illuminate\Support\Collection
      */
     protected $drunkPeople;
 
     /**
-     * Initiators
+     * Initiators.
      */
     public function __construct()
     {
@@ -87,6 +91,7 @@ class AlcoholManager
 
     /**
      * @param $name
+     *
      * @return mixed
      */
     public function __get($name)

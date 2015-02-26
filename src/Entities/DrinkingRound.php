@@ -4,9 +4,9 @@ use Duffleman\Contracts\FoodItemInterface;
 
 class DrinkingRound
 {
-
     /**
      * Stores the specific drink for this round.
+     *
      * @var \Duffleman\Contracts\FoodItemInterface
      */
     public $drink;
